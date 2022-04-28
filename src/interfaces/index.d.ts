@@ -20,3 +20,7 @@ export interface IUser {
   // birthday: string;
   content: string;
 }
+export interface ICategory {
+  id: string;
+  title: string;
+}
