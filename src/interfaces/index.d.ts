@@ -16,3 +16,7 @@ export interface IUser {
   status: "true" | "false";
   birthday: string;
 }
+export interface ICategory {
+  id: string;
+  title: string;
+}

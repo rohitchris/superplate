@@ -17,6 +17,7 @@ const API_URL = "https://api.fake-rest.refine.dev";
 import { authProvider } from "src/authProvider";
 import { PostList, PostCreate, PostEdit, PostShow } from "@components/posts";
 import { UserList } from "@components/users";
+import { CategoryList } from "@components/categories";
 import {
   Title,
   Header,
@@ -47,6 +48,10 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         {
           name: "users",
           list: UserList,
+        },
+        {
+          name: "categories",
+          list: CategoryList,
         },
       ]}
       Title={Title}
