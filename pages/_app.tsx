@@ -14,6 +14,7 @@ import dataProvider from "@pankod/refine-simple-rest";
 const API_URL = "https://api.fake-rest.refine.dev";
 
 import { PostList, PostCreate, PostEdit, PostShow } from "@components/posts";
+import { UserList } from "@components/users";
 import {
   Title,
   Header,
@@ -38,6 +39,10 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
           create: PostCreate,
           edit: PostEdit,
           show: PostShow,
+        },
+        {
+          name: "users",
+          list: UserList,
         },
       ]}
       Title={Title}

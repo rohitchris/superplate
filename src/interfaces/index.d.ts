@@ -10,3 +10,9 @@ export interface IPost {
   createdAt: string;
   category: ICategory;
 }
+export interface IUser {
+  id: string;
+  firstName: string;
+  status: "true" | "false";
+  birthday: string;
+}
