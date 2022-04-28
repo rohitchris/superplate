@@ -13,6 +13,10 @@ export interface IPost {
 export interface IUser {
   id: string;
   firstName: string;
-  status: "true" | "false";
+  lastName: string;
+  email: string;
   birthday: string;
+  status: "true" | "false";
+  // birthday: string;
+  content: string;
 }
