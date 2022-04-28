@@ -23,6 +23,10 @@ import {
   Layout,
   OffLayoutArea,
 } from "@components/layout";
+import { CategoryList } from "@components/products/category";
+import { TagList } from "@components/products/tags";
+import { UserEdit } from "@components/users/edit";
+import { UserShow } from "@components/users/show";
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
@@ -43,6 +47,16 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         {
           name: "users",
           list: UserList,
+          edit: UserEdit,
+          show: UserShow,
+        },
+        {
+          name: "categories",
+          list: CategoryList,
+        },
+        {
+          name: "tags",
+          list: TagList,
         },
       ]}
       Title={Title}

@@ -21,7 +21,7 @@ import {
 } from "@pankod/refine-antd";
 import { IUser, ICategory } from "src/interfaces";
 
-export const UserList: React.FC<
+export const TagList: React.FC<
   IResourceComponentsProps<GetListResponse<IUser>>
 > = ({ initialData }) => {
   const { tableProps, sorter } = useTable<IUser>({
@@ -44,25 +44,25 @@ export const UserList: React.FC<
           sorter
         />
         <Table.Column
-          dataIndex="firstName"
-          key="firstName"
-          title="Name"
+          dataIndex="title"
+          key="title"
+          title="Title"
           render={(value) => <TextField value={value} />}
-          defaultSortOrder={getDefaultSortOrder("firstName", sorter)}
+          defaultSortOrder={getDefaultSortOrder("title", sorter)}
           sorter
         />
-        <Table.Column
+        {/* <Table.Column
           dataIndex="status"
           key="status"
           title="Status"
           render={(value) => <TagField value={value} />}
           defaultSortOrder={getDefaultSortOrder("status", sorter)}
           sorter
-        />
+        /> */}
         <Table.Column
           dataIndex="birthday"
           key="birthday"
-          title="Birthday"
+          title="Date"
           render={(value) => <DateField value={value} format="LLL" />}
           defaultSortOrder={getDefaultSortOrder("birthday", sorter)}
           sorter
@@ -72,7 +72,7 @@ export const UserList: React.FC<
           dataIndex="actions"
           render={(_, record) => (
             <Space>
-              <EditButton hideText size="small" resourceName="users" recordItemId={record.id} />
+              <EditButton hideText size="small" recordItemId={record.id} />
               <ShowButton hideText size="small" recordItemId={record.id} />
               <DeleteButton hideText size="small" recordItemId={record.id} />
             </Space>
