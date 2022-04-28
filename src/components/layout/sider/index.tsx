@@ -11,7 +11,7 @@ import {
 import { AntdLayout, Menu, Grid, Icons, useMenu } from "@pankod/refine-antd";
 import { antLayoutSider, antLayoutSiderMobile } from "./styles";
 
-const { UnorderedListOutlined } = Icons;
+const { UnorderedListOutlined, LogoutOutlined } = Icons;
 
 export const Sider: React.FC = () => {
   const [collapsed, setCollapsed] = useState<boolean>(false);
@@ -92,6 +92,10 @@ export const Sider: React.FC = () => {
         }}
       >
         {renderTreeView(menuItems, selectedKey)}
+
+        <Menu.Item key="logout" icon={<LogoutOutlined />}>
+          Logout
+        </Menu.Item>
       </Menu>
     </AntdLayout.Sider>
   );
