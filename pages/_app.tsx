@@ -6,6 +6,7 @@ import {
   notificationProvider,
   ReadyPage,
   ErrorComponent,
+  LoginPage,
 } from "@pankod/refine-antd";
 import routerProvider from "@pankod/refine-nextjs-router";
 
@@ -13,6 +14,7 @@ import "@pankod/refine-antd/dist/styles.min.css";
 import dataProvider from "@pankod/refine-simple-rest";
 const API_URL = "https://api.fake-rest.refine.dev";
 
+import { authProvider } from "src/authProvider";
 import { PostList, PostCreate, PostEdit, PostShow } from "@components/posts";
 import { UserList } from "@components/users";
 import {
@@ -36,6 +38,8 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       ReadyPage={ReadyPage}
       catchAll={<ErrorComponent />}
       dataProvider={dataProvider(API_URL)}
+      authProvider={authProvider}
+      LoginPage={LoginPage}
       resources={[
         {
           name: "posts",
