@@ -1,20 +1,21 @@
-import { GetServerSideProps } from "next";
-export { NextRouteComponent as default } from "@pankod/refine-nextjs-router";
-import { checkAuthentication } from "@pankod/refine-nextjs-router";
+import Link from 'next/link'
 
-import { authProvider } from "src/authProvider";
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { isAuthenticated, ...props } = await checkAuthentication(
-    authProvider,
-    context
-  );
-
-  if (!isAuthenticated) {
-    return props;
-  }
-
-  return {
-    props: {},
-  };
+export const HomePage: React.FC = () => {
+  return (
+    <>
+        homepage will go here!<br />
+        <h1 className="title">
+          Links: {' '}
+          <Link href="/posts">
+            <a>Admin</a>
+          </Link>
+          {' | '}
+          <Link href="/profile">
+            <a>Profile page</a>
+          </Link>
+        </h1>
+    </>
+);
 };
+
+export default HomePage;
