@@ -1,8 +1,10 @@
-import { GetServerSideProps } from "next";
-export { NextRouteComponent as default } from "@pankod/refine-nextjs-router";
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  return {
-    props: {},
-  };
+export const ProfilePage: React.FC = () => {
+    return (
+      <>
+          your profile!
+      </>
+  );
 };
+
+export default ProfilePage;
