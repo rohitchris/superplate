@@ -31,7 +31,6 @@ import { UserEdit } from "@components/users/edit";
 import { UserShow } from "@components/users/show";
 
 import { ProfilePage } from "pages/profile";
-import { HomePage } from "pages/home";
 
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
